@@ -11,31 +11,74 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath) {
       header = (
-        <h1 className="text-6xl font-black font-sans mb-10 mt-0">
-          <Link className="shadow-none" to={`/`}>
-            {title}
-          </Link>
-        </h1>
+        <div className="flex w-full">
+          <h1 className="text-sm font-extrabold font-sans mb-10 mt-0">
+            <Link className="shadow-none" to={`/`}>
+              {title}
+            </Link>
+          </h1>
+          <div class="menu ml-auto">
+            <a href="" class="ml-4">
+              about
+            </a>
+            <a href="" class="ml-4">
+              archive
+            </a>
+            <a href="" class="ml-4">
+              contact
+            </a>
+          </div>
+        </div>
       )
     } else {
       header = (
-        <h3 className="text-2xl font-sans font-black mt-0">
-          <Link className="shadow-none" to={`/`}>
-            {title}
-          </Link>
-        </h3>
+        <div className="flex w-full">
+          <h1 className="text-sm font-extrabold font-sans mb-10 mt-0">
+            <Link className="shadow-none" to={`/`}>
+              {title}
+            </Link>
+          </h1>
+          <div class="menu ml-auto">
+            <a href="" class="ml-4">
+              about
+            </a>
+            <a href="" class="ml-4">
+              archive
+            </a>
+            <a href="" class="ml-4">
+              contact
+            </a>
+          </div>
+        </div>
       )
     }
     return (
-      <div className="max-w-2xl mx-auto px-5 py-10">
-        <header>{header}</header>
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a className="text-blue-600" href="https://www.gatsbyjs.org">
-            Gatsby
-          </a>
+      <div>
+        <div className="max-w-2xl mx-auto px-5 py-10">
+          <header>{header}</header>
+          <main>{children}</main>
+        </div>
+        <footer class=" mx-auto flex h-24 w-full">
+          <div class="white w-48"></div>
+          <div class="dark flex w-full bg-blue-900 text-white ">
+            <div class="ml-4 mt-4">
+              <small class="helper font-sans">
+                © {new Date().getFullYear()} Momanyi Samuel. This site was
+                designed in figma, Gatsby, tailwindcss & deployed via Netlify.
+              </small>
+            </div>
+            <div class="links ml-auto mr-16 mt-4">
+              <a href="" class="link ml-4">
+                dribbble
+              </a>
+              <a href="" class="link ml-4">
+                linkedin
+              </a>
+              <a href="" class="link ml-4">
+                github
+              </a>
+            </div>
+          </div>
         </footer>
       </div>
     )

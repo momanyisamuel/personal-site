@@ -1,27 +1,26 @@
 .markdown > h2 {
-  @apply text-3xl font-black mt-16 mb-8;
+  @apply text-3xl font-extrabold mt-16 mb-8;
 }
 
 .markdown > h3 {
-  @apply text-2xl font-black mt-16 mb-8;
+  @apply text-2xl font-extrabold mt-16 mb-8;
 }
 
 .markdown > h4 {
-  @apply font-black uppercase mt-16 mb-8;
+  @apply font-extrabold uppercase mt-16 mb-8;
 }
 
 .markdown > h5 {
-  @apply text-sm font-black mt-16 mb-8;
+  @apply text-sm font-extrabold mt-16 mb-8;
 }
 
 .markdown > h6 {
-  @apply text-xs font-black mt-16 mb-8;
+  @apply text-xs font-extrabold mt-16 mb-8;
 }
 
 .markdown a {
   @apply text-blue-600;
 }
-
 
 .markdown > p {
   @apply mb-8;
@@ -38,4 +37,26 @@
 .markdown ol {
   @apply list-decimal mb-8;
 }
-
+body {
+  font-family: "Source Serif Pro", serif;
+}
+p {
+  font-family: "Source Serif Pro", serif;
+  font-size: 1.365rem;
+  line-height: 1.45;
+}
+.gatsby-highlight {
+  background: #fbfbfb;
+  padding: 0.5rem;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 1.2rem;
+  @apply text-sm;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Cooper Hewitt", sans-serif;
+}

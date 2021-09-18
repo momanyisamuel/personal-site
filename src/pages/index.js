@@ -19,27 +19,25 @@ class BlogIndex extends React.Component {
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
-            <article key={node.fields.slug}>
-              <header>
-                <h3 className="text-2xl font-black mt-16 mb-2">
-                  <Link
-                    className="text-blue-600 shadow-none"
-                    to={node.fields.slug}
-                  >
-                    {title}
-                  </Link>
-                </h3>
-                <small>{node.frontmatter.date}</small>
-              </header>
-              <section>
-                <p
-                  className="mb-8"
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
-              </section>
-            </article>
+            <div
+              key={node.fields.slug}
+              className="post hover:bg-blue-900 hover:text-white border-4 border-blue-900 py-4 px-6 mb-8 flex button button--calypso cursor-pointer"
+            >
+              <Link to={node.fields.slug} className="shadow-none">
+                <div>
+                  <div className="flex mb-1">
+                    <h1 className="text-base uppercase">{title}</h1>
+                  </div>
+                  <p
+                    className="text-base"
+                    dangerouslySetInnerHTML={{ __html: node.excerpt }}
+                  />
+                  <div className="flex">
+                    <p className="text-base">{node.frontmatter.date}</p>
+                  </div>
+                </div>
+              </Link>
+            </div>
           )
         })}
       </Layout>
@@ -64,7 +62,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "MMMM DD - YYYY")
             title
             description
           }

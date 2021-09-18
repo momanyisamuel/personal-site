@@ -34,25 +34,21 @@ const Bio = () => {
 
   const { author, social } = data.site.siteMetadata
   return (
-    <div className="flex mb-20">
+    <div className="flex mb-10">
       <Image
-        className="mr-4 mb-0 rounded-full"
+        className="mr-4 mb-0 border"
         fixed={data.avatar.childImageSharp.fixed}
         alt={author}
         style={{
-          minWidth: 50,
+          width: "80px",
+          height: "60px",
+          clipPath: "polygon(100% 0, 50% 100%, 0 0)",
         }}
       />
-      <p>
-        Written by <strong>{author}</strong> who lives and works in San
-        Francisco building useful things.
-        {` `}
-        <a
-          className="text-blue-600"
-          href={`https://twitter.com/${social.twitter}`}
-        >
-          You should follow him on Twitter
-        </a>
+      <p className="text-base">
+        Hey, I'm <strong>{author}</strong>, I'm a software engineer and cyber
+        security advocate, Living in Nairobi. I am learning about programming
+        concepts, JavaScript and Python.
       </p>
     </div>
   )

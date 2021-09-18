@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog TailwindCSS`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    title: `Momanyi Samuel`,
+    author: `Momanyi Samuel`,
+    description: `A personal blog`,
     siteUrl: `https://gatsby-starter-blog-tailwindcss-demo.netlify.com/`,
     social: {
       twitter: `kylemathews`,
